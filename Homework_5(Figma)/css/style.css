@@ -1,0 +1,160 @@
+html, body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.header {
+    padding: 28px 0;
+}
+
+.menu {
+    max-width: 496px;
+    margin: 0 auto;
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu__item {
+    display: inline-block;
+    width: calc(20% - 5px);
+    text-align: center;
+}
+
+.menu__link {
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #828282;
+}
+
+.container {
+    max-width: 970px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.menu__link.ls-activ {
+    color: #000;
+}
+
+.menu__link:hover {
+    color: #000;
+}
+
+.divider {
+    border: none;
+    height: 1px;
+    background: #828282;
+    margin: 28px 0 0;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+}
+
+.hero h1 {
+    margin: 0 0 32px;
+    font-size: 47px;
+    line-height: 1.15;
+    font-weight: 700;
+}
+
+.hero img{
+    width: 100%;
+    height: 388px;
+    object-fit: cover;
+    display: block;
+}
+
+.about {
+    background: #f6f6f6;
+    padding: 120px 0;
+    margin: 0 auto 0;
+    text-align: center;
+        
+}
+
+.about_container {
+    width: 970px;
+    margin: 0 auto 0;
+}
+
+.about_title {
+    width: 200px; /* Ширина блоку заголовка 200px */
+    height: 40px; /* Висота блоку заголовка 40px */
+    margin: 0 auto 0;
+    font-family: "Open Sans", Arial, sans-serif;  /* Шрифт */
+    font-size: 34px;  /* Розмір тексту */
+    font-weight: bold; /* Жирний шрифт */
+    line-height: 48px; /* Висота рядка 48px */
+    text-align: center; /* Текст по центру */
+}
+
+.about-text {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    margin: 0 auto 0;
+    max-width: 600px; /* Ширина для комфортного читання */
+    /* height: 210px;
+    /* font-size: 18px;
+    /* line-height: 22px;
+    /* width: 480px;
+    /* display: flex;
+    /* flex-direction: column;  /* Вертикальне розташування */
+    /* justify-content: center; /* Центрує по вертикалі (основна вісь) */
+    /* align-items: center;     /* Центрує по горизонталі (поперечна вісь) */
+}
+
+.about-text:first-child {
+    margin-top: 100px; /* Відступ після заголовка */
+}
+
+.about-text:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.skills-title {
+    padding-bottom: 30px;
+}
+
+.subtitle {
+    font-size: 18px;
+    font-weight: 400;
+    padding-bottom: 50px;
+}
+
+.skills-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+}
+
+.img-desc {
+    padding-top: 25px;
+    padding-bottom: 60px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: aliceblue;
+}
+
+body {
+    margin: 0;    
+}
+
+h1, h4 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+
