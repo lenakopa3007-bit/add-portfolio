@@ -1,0 +1,378 @@
+
+ /* 1 Селектор по тегу ------ 1*/
+html body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: rgb(145, 130, 143);
+}
+
+/* 2 Селектор за класом ---- 
+Застосовується до елементів з певним класом 10*/
+.text {
+    background: blueviolet;
+    font-size: 20px;
+}
+
+.container {
+    max-width: 1040px;
+    margin: 0 auto;
+    padding: 20px 15px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* 3 Селектор за ID ---- 100*/
+#bolder-text {
+    font-weight: 800;
+}
+p {
+    color: darkorchid;
+}
+
+h1 {
+  color: rgb(135, 11, 159);
+  text-align: center;
+}
+
+#home {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 3rem 0;
+    border-radius: 10px 10px 0 0;
+}
+
+/* 4. СЕЛЕКТОР НАЩАДКА (Descendant Selector)
+   Застосовується до елементів всередині інших елементів */
+.main-navigation ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.main-navigation ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* 5. ПСЕВДО-КЛАС (Pseudo-class Selector)
+   Застосовується до елементів у певному стані */
+.main-navigation ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+a:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+}
+
+.skills-list li:nth-child(odd) {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+/* 6. СЕЛЕКТОР АТРИБУТА (Attribute Selector)
+   Застосовується до елементів з певними атрибутами */
+[data-section] {
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-left: 4px solid #667eea;
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+[data-section]:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+a[target="_blank"]::after {
+    content: " ↗";
+    font-size: 0.8em;
+    color: #667eea;
+}
+
+/* 7. ДОЧІРНІЙ СЕЛЕКТОР (Child Selector)
+   Застосовується тільки до прямих дочірніх елементів */
+.wrapper > section > h2 {
+    color: #764ba2;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 0.8rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    position: relative;
+}
+
+.wrapper > section > h2::before {
+    content: "▶ ";
+    color: #667eea;
+}
+
+/* 8. ГРУПОВИЙ СЕЛЕКТОР (Grouping Selector)
+   Застосовує однакові стилі до кількох елементів */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+/* 9. УНІВЕРСАЛЬНИЙ СЕЛЕКТОР + КОМБІНАЦІЯ (Universal + Adjacent Sibling)
+   Застосовується до всіх елементів після певного */
+h3 + ul,
+h3 + p,
+h4 + p {
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+/* 10. ПСЕВДО-ЕЛЕМЕНТ (Pseudo-element Selector)
+   Створює віртуальні елементи */
+p::first-letter {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.highlight::before {
+    content: "💡 ";
+    font-size: 1.2em;
+}
+
+/* ==========================================
+   ДОДАТКОВІ СТИЛІ ДЛЯ КОМПОНЕНТІВ
+   ========================================== */
+
+/* Навігація */
+nav {
+    background-color: #4a2965;
+    color: white;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/* Header стилі */
+header {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+header h1 {
+    color: #4a2965;
+    margin-bottom: 1rem;
+}
+
+.page-header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.profile-photo {
+    max-width: 250px;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    margin: 1rem 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 1rem 0;
+    opacity: 0.95;
+}
+
+/* Кнопки */
+.button {
+    display: inline-block;
+    background-color: #4a2965;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+}
+
+.button:hover {
+    background-color: #6a3985;
+}
+
+
+.primary-button {
+    background-color: white;
+    color: #4a2965;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+.primary-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.5);
+}
+
+.secondary-button {
+    background-color: #667eea;
+    color: white;
+}
+
+.secondary-button:hover {
+    background-color: #764ba2;
+    transform: scale(1.05);
+}
+
+/* Списки навичок */
+.skills-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.skills-list li {
+    padding: 12px 15px;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.skills-list.technical li {
+    border-left: 4px solid #667eea;
+}
+
+.skills-list.design li {
+    border-left: 4px solid #764ba2;
+}
+
+.skills-list.soft li {
+    border-left: 4px solid #f093fb;
+}
+
+.skills-list li:hover {
+    background-color: #667eea !important;
+    color: white;
+    transform: translateX(10px);
+}
+
+/* Контактна інформація */
+.contact-info p {
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.contact-info a:hover {
+    border-bottom-color: #667eea;
+}
+
+/* Фігура з зображенням */
+.image-figure {
+    background: #e9e6e9;
+    padding: 15px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+.image-figure img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.image-figure figcaption {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #4a2965;
+}
+
+/* Відео */
+video {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+}
+
+/* Час */
+time {
+    display: inline-block;
+    background-color: #667eea;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    margin: 15px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #4a2965;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+    border-radius: 0 0 10px 10px;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+/* Статті */
+article {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+}
+
+article h3 {
+    color: #4a2965;
+    margin-top: 0;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+    .main-navigation ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .page-header h1 {
+        font-size: 2rem;
+    }
+    
+    .profile-photo {
+        max-width: 200px;
+    }
+    
+    [data-section] {
+        padding: 1rem;
+    }
+}
